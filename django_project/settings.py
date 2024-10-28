@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "blog.apps.BlogConfig",  # new
+    "accounts.apps.AccountsConfig",  # new
 ]
 
 MIDDLEWARE = [
@@ -81,7 +82,8 @@ DATABASES = {
     }
 }
 
-
+LOGIN_REDIRECT_URL = "home"  # new
+LOGOUT_REDIRECT_URL = "home"
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
